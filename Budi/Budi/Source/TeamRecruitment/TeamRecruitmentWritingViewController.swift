@@ -10,6 +10,7 @@ import UIKit
 final class TeamRecruitmentWritingViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
@@ -17,7 +18,13 @@ final class TeamRecruitmentWritingViewController: UIViewController {
         configureNavigationBar()
         configureCells()
     }
-    
+
+    override func viewDidLayoutSubviews() {
+        let flowLayout =  UICollectionViewFlowLayout()
+        flowLayout.minimumLineSpacing = 0
+        collectionView.collectionViewLayout = flowLayout
+    }
+
     func configureCells() {
         collectionView.register(.init(nibName: "CalendarCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "calendarCell")
         collectionView.register(.init(nibName: "SelectPhotoCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "selectPhotoCell")
@@ -32,19 +39,47 @@ final class TeamRecruitmentWritingViewController: UIViewController {
 
 extension TeamRecruitmentWritingViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        4
+        7
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch indexPath.row {
+
         case 0:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TeamRecruitmentWritingLocationCell.identifier, for: indexPath) as UICollectionViewCell
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "selectPhotoCell", for: indexPath) as? SelectPhotoCollectionViewCell else { return UICollectionViewCell() }
+            cell.layer.borderWidth = 0.5
+            cell.layer.borderColor = UIColor.systemGray.cgColor
+
             return cell
         case 1:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TeamRecruitmentWritingMemberCell.identifier, for: indexPath) as UICollectionViewCell
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "calendarCell", for: indexPath) as? CalendarCollectionViewCell else { return UICollectionViewCell() }
+            cell.layer.borderWidth = 0.5
+            cell.layer.borderColor = UIColor.systemGray.cgColor
             return cell
         case 2:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "projectNameCell", for: indexPath) as? ProjectNameCollectionViewCell else { return UICollectionViewCell() }
+            cell.layer.borderWidth = 0.5
+            cell.layer.borderColor = UIColor.systemGray.cgColor
+            return cell
+        case 3:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TeamRecruitmentWritingLocationCell.identifier, for: indexPath) as UICollectionViewCell
+            cell.layer.borderWidth = 0.5
+            cell.layer.borderColor = UIColor.systemGray.cgColor
+            return cell
+        case 4:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TeamRecruitmentWritingMemberCell.identifier, for: indexPath) as UICollectionViewCell
+            cell.layer.borderWidth = 0.5
+            cell.layer.borderColor = UIColor.systemGray.cgColor
+            return cell
+        case 5:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TeamRecruitmentWritingDescriptionCell.identifier, for: indexPath) as UICollectionViewCell
+            cell.layer.borderWidth = 0.5
+            cell.layer.borderColor = UIColor.systemGray.cgColor
+            return cell
+        case 6:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TeamRecruitmentWritingLocationCell.identifier, for: indexPath) as UICollectionViewCell
+            cell.layer.borderWidth = 0.5
+            cell.layer.borderColor = UIColor.systemGray.cgColor
             return cell
         default:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TeamRecruitmentWritingPartCell.identifier, for: indexPath) as UICollectionViewCell
@@ -54,7 +89,28 @@ extension TeamRecruitmentWritingViewController: UICollectionViewDataSource {
 }
 
 extension TeamRecruitmentWritingViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = collectionView.bounds.width
+        switch indexPath.item {
 
+        case 0:
+            return CGSize(width: width, height: 80)
+        case 1:
+            return CGSize(width: width, height: 80)
+        case 2:
+            return CGSize(width: width, height: 50)
+        case 3:
+            return CGSize(width: width, height: 50)
+        case 4:
+            return CGSize(width: width, height: 150)
+        case 5:
+            return CGSize(width: width, height: 150)
+        case 6:
+            return CGSize(width: width, height: 50)
+        default:
+            return CGSize(width: width, height: 0)
+        }
+    }
 }
 
 private extension TeamRecruitmentWritingViewController {

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,16 +20,15 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="la4-9I-gsV">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="knf-gJ-uJj">
-                                <rect key="frame" x="150" y="0.0" width="450" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="450" id="NlZ-Ze-vfM"/>
-                                    <constraint firstAttribute="height" constant="60" id="iNe-x3-5DS"/>
-                                </constraints>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="knf-gJ-uJj">
+                                <rect key="frame" x="78.5" y="0.0" width="521.5" height="60"/>
                                 <locale key="locale" localeIdentifier="ko"/>
                             </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="날짜 선택" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TIK-ws-Plp">
-                                <rect key="frame" x="32" y="20" width="64" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="날짜 선택" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TIK-ws-Plp">
+                                <rect key="frame" x="15" y="20" width="63.5" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="63.5" id="F5v-mH-rB7"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -37,11 +37,10 @@
                         <constraints>
                             <constraint firstItem="TIK-ws-Plp" firstAttribute="top" secondItem="la4-9I-gsV" secondAttribute="top" constant="20" symbolic="YES" id="1Tb-qP-NmX"/>
                             <constraint firstAttribute="bottom" secondItem="knf-gJ-uJj" secondAttribute="bottom" id="7up-sC-GZX"/>
-                            <constraint firstItem="TIK-ws-Plp" firstAttribute="leading" secondItem="la4-9I-gsV" secondAttribute="leading" constant="32" id="ADv-de-CMH"/>
+                            <constraint firstItem="TIK-ws-Plp" firstAttribute="leading" secondItem="la4-9I-gsV" secondAttribute="leading" constant="15" id="ADv-de-CMH"/>
+                            <constraint firstItem="knf-gJ-uJj" firstAttribute="leading" secondItem="TIK-ws-Plp" secondAttribute="trailing" id="AQY-us-emr"/>
                             <constraint firstItem="knf-gJ-uJj" firstAttribute="top" secondItem="la4-9I-gsV" secondAttribute="top" id="KIV-TH-TX7"/>
                             <constraint firstAttribute="bottom" secondItem="TIK-ws-Plp" secondAttribute="bottom" constant="19" id="PBv-ym-2Ly"/>
-                            <constraint firstItem="knf-gJ-uJj" firstAttribute="leading" secondItem="TIK-ws-Plp" secondAttribute="trailing" constant="54" id="cQq-Rb-8a4"/>
-                            <constraint firstItem="knf-gJ-uJj" firstAttribute="leading" secondItem="la4-9I-gsV" secondAttribute="leading" constant="150" id="dhw-Jr-uvz"/>
                             <constraint firstAttribute="trailing" secondItem="knf-gJ-uJj" secondAttribute="trailing" id="dwP-2S-4RH"/>
                         </constraints>
                     </view>

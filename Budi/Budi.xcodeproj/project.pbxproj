@@ -118,6 +118,16 @@
 		A865B7BD2717F47F006E244F /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				CED5ADAA2716BBFD00CDCAA9 /* TeamRecruitmentCollectionViewCell.swift */,
+				CED5ADAB2716BBFD00CDCAA9 /* TeamRecruitmentCollectionViewCell.xib */,
+				5ED2250A2717DF8D0013CEB8 /* TeamRecruitmentWritingLocationCell.swift */,
+				5ED2250B2717DF8E0013CEB8 /* TeamRecruitmentWritingLocationCell.xib */,
+				5ED225062717DF5C0013CEB8 /* TeamRecruitmentWritingMemberCell.swift */,
+				5ED225072717DF5C0013CEB8 /* TeamRecruitmentWritingMemberCell.xib */,
+				5ED224FE271756440013CEB8 /* TeamRecruitmentWritingDescriptionCell.swift */,
+				5ED224FF271756440013CEB8 /* TeamRecruitmentWritingDescriptionCell.xib */,
+				5ED22502271757D00013CEB8 /* TeamRecruitmentWritingPartCell.swift */,
+				5ED22503271757D00013CEB8 /* TeamRecruitmentWritingPartCell.xib */,
 				A865B7CF2717F8AE006E244F /* ProjectNameCollectionViewCell.swift */,
 				A865B7CE2717F8AE006E244F /* ProjectNameCollectionViewCell.xib */,
 				A865B7C22717F4B6006E244F /* CalendarCollectionViewCell.swift */,
@@ -198,16 +208,6 @@
 				B9D66EBE27146F2F00668490 /* TeamRecruitmentCoordinator.swift */,
 				B9D66ECB2714716400668490 /* TeamRecruitmentViewController.swift */,
 				B9D66ECD27147AEA00668490 /* TeamRecruitmentWritingViewController.swift */,
-				CED5ADAA2716BBFD00CDCAA9 /* TeamRecruitmentCollectionViewCell.swift */,
-				CED5ADAB2716BBFD00CDCAA9 /* TeamRecruitmentCollectionViewCell.xib */,
-				5ED2250A2717DF8D0013CEB8 /* TeamRecruitmentWritingLocationCell.swift */,
-				5ED2250B2717DF8E0013CEB8 /* TeamRecruitmentWritingLocationCell.xib */,
-				5ED225062717DF5C0013CEB8 /* TeamRecruitmentWritingMemberCell.swift */,
-				5ED225072717DF5C0013CEB8 /* TeamRecruitmentWritingMemberCell.xib */,
-				5ED224FE271756440013CEB8 /* TeamRecruitmentWritingDescriptionCell.swift */,
-				5ED224FF271756440013CEB8 /* TeamRecruitmentWritingDescriptionCell.xib */,
-				5ED22502271757D00013CEB8 /* TeamRecruitmentWritingPartCell.swift */,
-				5ED22503271757D00013CEB8 /* TeamRecruitmentWritingPartCell.xib */,
 			);
 			path = TeamRecruitment;
 			sourceTree = "<group>";
