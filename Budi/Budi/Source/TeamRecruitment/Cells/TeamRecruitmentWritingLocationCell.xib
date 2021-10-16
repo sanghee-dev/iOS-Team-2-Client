@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -33,11 +34,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Yxk-SY-pyu" firstAttribute="centerY" secondItem="t7H-t8-tLa" secondAttribute="centerY" id="FNh-rr-FDW"/>
+                            <constraint firstAttribute="centerY" secondItem="t7H-t8-tLa" secondAttribute="centerY" id="FNh-rr-FDW"/>
                             <constraint firstItem="t7H-t8-tLa" firstAttribute="leading" secondItem="hTr-su-va4" secondAttribute="leading" constant="8" id="VAC-tc-V1y"/>
                             <constraint firstAttribute="trailing" secondItem="Yxk-SY-pyu" secondAttribute="trailing" constant="8" id="Xde-3W-Sma"/>
                             <constraint firstItem="Yxk-SY-pyu" firstAttribute="leading" secondItem="t7H-t8-tLa" secondAttribute="trailing" constant="8" id="bz1-mS-6g9"/>
-                            <constraint firstItem="t7H-t8-tLa" firstAttribute="top" secondItem="hTr-su-va4" secondAttribute="top" constant="8" id="fE5-ny-6fB"/>
+                            <constraint firstItem="Yxk-SY-pyu" firstAttribute="centerY" secondItem="hTr-su-va4" secondAttribute="centerY" id="wW1-Ke-mKH"/>
                         </constraints>
                     </view>
                 </subviews>
